@@ -38,18 +38,18 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-hover-palette-2-base u-text-white" href="Getforcecoin.com" style="padding: 10px 20px;">Contract Address</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-hover-palette-2-base u-text-white" href="Getforcecoin.com" style="padding: 10px 20px;">How to buy</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-hover-palette-2-base u-text-white" href="Getforcecoin.com" style="padding: 10px 20px;">Buy Now</a>
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-hover-palette-2-base u-text-white" href="https://t.me/+G7nUD6aIBEBlYjEx" style="padding: 10px 20px;">Contract Address</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-hover-palette-2-base u-text-white" href="Index" style="padding: 10px 20px;">How to buy</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-hover-palette-2-base u-text-white" href="Index" style="padding: 10px 20px;">Buy Now</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Getforcecoin.com">Contract Address</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Getforcecoin.com">How to buy</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Getforcecoin.com">Buy Now</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://t.me/+G7nUD6aIBEBlYjEx">Contract Address</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://t.me/+G7nUD6aIBEBlYjEx">How to buy</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://t.me/+G7nUD6aIBEBlYjEx">Buy Now</a>
 </li></ul>
               </div>
             </div>
@@ -72,7 +72,7 @@
         <div class="custom-expanded u-radius-10 u-shape u-shape-round u-white u-shape-2"></div>
         <h1 class="u-text u-text-body-alt-color u-text-default u-text-2">Binance Contact Address</h1>
         <h1 class="u-text u-text-default u-text-3">Coming Soon</h1>
-        <a href="getForcecoin.com" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-2-base u-radius-6 u-btn-1">Copy Address</a>
+        <a href="Index" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-2-base u-radius-6 u-btn-1">Copy Address</a>
         <h1 class="u-text u-text-body-alt-color u-text-default u-text-4">Token Price :&nbsp; $<span id="dynamic-price">Loading</span>&nbsp;</h1>
       </div>
     </section>
@@ -117,53 +117,9 @@
       </div>
     </section>
     
-    <script>
-    // Fetch and display only PriceInUSD from Bitquery data
-    async function fetchBitqueryData() {
-        const endpoint = 'https://streaming.bitquery.io/graphql';
-        const headers = {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ory_at_ZH215V_lKseOTDrQMyQvH9zwgSQfKJi4izBCbQUA4Vk.y5IVvRXg4BCQhovgGe4SfC_021o1d4xpWMyn-iTDrXI'
-        };
-        const body = JSON.stringify({
-            query: `{
-                EVM(dataset: archive, network: bsc) {
-                    DEXTrades(
-                        limit: {count: 1},
-                        orderBy: {descending: Block_Time},
-                        where: {Trade: {Buy: {Currency: {SmartContract: {is: "0x302e682d6002aa67ced1d116b2f0b50534124aa7"}}}}}
-                    ) {
-                        Trade {
-                            Buy {
-                                PriceInUSD
-                            }
-                        }
-                    }
-                }
-            }`
-        });
-
-        try {
-            const response = await fetch(endpoint, { method: 'POST', headers, body });
-            const data = await response.json();
-            const priceInUSD = data?.data?.EVM?.DEXTrades[0]?.Trade?.Buy?.PriceInUSD;
-
-            if (priceInUSD !== undefined) {
-                document.getElementById('dynamic-price').innerText = priceInUSD.toFixed(2);
-            } else {
-                document.getElementById('dynamic-price').innerText = 'N/A';
-            }
-        } catch (error) {
-            console.error('Error fetching data:', error);
-            document.getElementById('dynamic-price').innerText = 'N/A';
-        }
-    }
-
-    // Call the function to fetch and display the price
-    fetchBitqueryData();
-</script>  
     
-   
+    
+    
     </section>
   
 </body></html>
