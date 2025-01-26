@@ -41915,7 +41915,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 @media (max-width: 575px) {
   .u-header .u-sheet-1 {
-    min-height: 145px;
+    min-height: 92px;
   }
 
   .u-header .u-menu-1 {
@@ -41925,7 +41925,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
   .u-header .u-text-1 {
     margin-top: -28px;
-    margin-bottom: 60px;
+    margin-bottom: 19px;
     margin-left: 20px;
   }
 }
